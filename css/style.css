@@ -1,0 +1,822 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Lt.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    font-family: "BookkMyungjo";
+    font-size: 15px;
+    line-height: 25px;
+}
+
+#wrap {
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+#egg {
+    cursor: url(../images/egg.png)65 65, auto;
+}
+
+#pen {
+    cursor: url(../images/pen.png)65 65, auto;
+}
+
+#eggpen {
+    cursor: url(../images/eggpen.png)65 65, auto;
+}
+
+#header_wrap {
+    height: 70px;
+    background-color: #B3C79C;
+}
+
+.header {
+    width: 1320px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.header_menu {
+    display: flex;
+
+}
+
+
+.header_menu>li {
+    position: relative;
+    /* .submenu의 기준 */
+}
+
+.header_menu>li>a {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 23px 35px;
+}
+
+.header_menu>li>a:hover {
+     transition-duration: 0.5s;
+    color: #ffffff;
+    cursor: url(../images/egg.png)65 65, auto;
+
+}   
+
+.submenu {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.header_menu>li:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.submenu li a {
+    display: block;
+    color: #fff;
+    background-color: #87952A;
+    padding: 10px;
+    border-bottom: 1px solid #0000003a;
+    border-top: 1px solid #ffffff34;
+    transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+    background-color: #DAE0C5;
+    cursor: url(../images/egg.png)65 65, auto;
+    
+}
+
+#banner_wrap {
+    height: 940px;
+    background: url(../images/banner_bg.png) no-repeat;
+}
+
+.banner {
+    width: 1320px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.box1 {
+    float: left;
+    margin-top: 200px;
+}
+
+.box1 h2 {
+    margin: 50px 0px;
+    font-size: 35px;
+    color: #064B23;
+}
+
+.box1 strong {
+    line-height: 40px;
+    font-size: 18px;
+    color: #064B23;
+}
+
+.box1 p {
+    font-weight: 700;
+}
+
+.box2 {
+    float: right;
+    width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    position: relative;
+    height: 300px;
+}
+
+.banner2 {
+    position: absolute;
+    top: 420px;
+    right: 370px;
+    z-index: 7;
+}
+
+.banner1 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 6;
+}
+
+#container {
+    margin: 100px auto;
+    width: 1320px;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.philosophy {
+    padding-left: 50px;
+    width: 1320px;
+    height: 500px;
+    margin: 100px auto;
+    background: url(../images/about_philosophy.png)no-repeat;
+}
+
+.philosophy h2 {
+    padding: 100px 0px 120px 0px;
+    font-size: 25px;
+}
+
+.philosophy p {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.keyword ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.keyword ul li h2 {
+    padding-top: 30px;
+}
+
+.keyword ul li h3 {
+    padding: 10px 0px 30px 0px;
+    font-weight: 700;
+}
+
+#introduce_wrap {
+    background: url(../images/about_bg.png) no-repeat;
+    height: 800px;
+}
+
+.introduce {
+    width: 1320px;
+    margin: auto;
+}
+
+.introduce ul {
+    display: flex;
+}
+
+.chef h2 {
+    line-height: 50px;
+    padding: 20px 0px 50px 80px;
+}
+
+.talk {
+    padding: 550px 0px 0px 50px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.advertisement1 {
+    margin-top: 100px;
+    background: url(../images/advertisement_1.png) no-repeat;
+    height: 300px;
+}
+
+#menu_wrap {
+    width: 1320px;
+    margin: 50px auto;
+}
+
+#menu_wrap h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.menu1 {
+    margin-top: 100px;
+}
+
+.menu1 ul {
+    float: right;
+}
+
+.explain1 {
+    width: 800px;
+    height: 190px;
+    background: url(../images/AP_bg.png) no-repeat;
+    float: right;
+    padding: 50px 0px 0px 100px;
+}
+
+.explain1 h2 {
+    padding-bottom: 30px;
+    color: #3D5E4A;
+}
+
+.menu2 {
+    margin-top: 100px;
+}
+
+.menu2 ul {
+    float: left;
+}
+
+.explain2 {
+    width: 800px;
+    height: 190px;
+    background: url(../images/PA_bg.png) no-repeat;
+    float: left;
+    padding: 50px 0px 0px 80px;
+    margin-left: 50px;
+}
+
+.explain2 h2 {
+    padding-bottom: 30px;
+    color: #3D5E4A;
+}
+
+.menu3 {
+    margin-top: 100px;
+}
+
+.menu3 ul {
+    float: right;
+}
+
+.explain3 {
+    width: 800px;
+    height: 190px;
+    background: url(../images/DS_bg.png) no-repeat;
+    float: right;
+    padding: 45px 0px 0px 70px;
+}
+
+.explain3 h2 {
+    padding-bottom: 30px;
+    color: #3D5E4A;
+}
+
+.button {
+    background-color: #7E9168;
+    color: white;
+    font-family: 나눔고딕;
+    padding: 10px 20px 13px 20px;
+    border: 3px solid #7E9168;
+    border-radius: 30px;
+    margin-left: 610px;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+}
+
+.button:hover {
+    font-weight: 800;
+    background-color: white;
+    color: #7E9168;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+    cursor: url(../images/pen.png)65 65, auto;
+}
+
+.advertisement2 {
+    margin-top: 100px;
+    background: url(../images/advertisement_2.png) no-repeat;
+    height: 300px;
+}
+
+#news {
+    width: 1320px;
+    margin: 150px auto;
+
+}
+
+#news h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.class {
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    background: url(../images/class_bg.png) no-repeat;
+}
+
+.class_img {
+    box-shadow: -10px 5px 50px rgb(117, 117, 117);
+}
+
+.class_text {
+    margin-left: 30px;
+}
+
+.class_text h2 {
+    font-size: 40px;
+    color: #064B23;
+    padding: 150px 0px 60px 0px;
+}
+
+.class_text p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 70px;
+}
+
+.class_button {
+    border: 3px solid #7E9168;
+    background-color: #7E9168;
+    color: white;
+    font-family: 나눔고딕;
+    padding: 10px 25px 13px 25px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+     cursor: url(../images/pen.png)65 65, auto;
+}
+
+.class_button:hover {
+    font-weight: 800;
+    background-color: white;
+    color: #7E9168;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+     cursor: url(../images/pen.png)65 65, auto;
+}
+
+.fall {
+    padding-left: 295px;
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    background: url(../images/fall_bg.png) no-repeat;
+}
+
+.fall_img {
+    margin-left: 30px;
+    box-shadow: 10px -5px 50px rgb(117, 117, 117);
+
+}
+
+.fall_text {
+    text-align: right;
+}
+
+.fall_text h2 {
+    font-size: 40px;
+    color: #064B23;
+    padding: 150px 0px 60px 0px;
+}
+
+.fall_text p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 70px;
+}
+
+.fall_button {
+    background-color: #7E9168;
+    color: white;
+    font-family: 나눔고딕;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    float: right;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+    cursor: url(../images/pen.png)65 65, auto;
+}
+
+.fall_button:hover {
+    font-weight: 800;
+    background-color: white;
+    color: #7E9168;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+    cursor: url(../images/pen.png)65 65, auto;
+}
+
+#store_wrap {
+    font-family: 나눔고딕;
+    background-color: #E9EED4;
+    padding-bottom: 50px;
+
+}
+
+.store {
+    margin: 0 auto;
+    width: 1320px;
+}
+
+#store_wrap h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+    padding-top: 50px;
+    font-family: "BookkMyungjo";
+}
+
+#store_wrap p {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 420px;
+    height: 500px;
+}
+
+
+.img_wrap {
+    position: absolute;
+    z-index: 1;
+    padding-top: 70px;
+    margin-left: 35px;
+}
+
+.ingredient {
+    text-align: center;
+    position: absolute;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform: translateY(200px);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 0;
+}
+
+.menu li:hover .ingredient {
+    transform: translateY(0px);
+    transition: all 1s;
+    opacity: 1;
+}
+
+.img_wrap {
+    cursor: url(../images/pen.png)65 65, auto;
+}
+
+.store_text {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.store_button {
+    background-color: #7E9168;
+    color: rgb(255, 255, 255);
+    font-family: 나눔고딕;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    margin-left: 610px;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+}
+
+.store_button:hover {
+    font-weight: 800;
+    background-color: white;
+    color: #7E9168;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+    cursor: url(../images/pen.png)65 65, auto;
+}
+
+#sns {
+    font-family: 나눔고딕;
+    margin: 100px auto;
+    width: 1320px;
+    text-align: center;
+    height: 800px;
+}
+
+#sns h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-family: "BookkMyungjo";
+
+}
+
+.ins {
+    margin-top: 50px;
+    background-color: #87952A;
+}
+
+.sns_mine {
+    float: left;
+    margin-left: 130px;
+}
+
+.sns_sub {
+    float: right;
+    margin-right: 130px;
+}
+
+.sns_mine li {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ins_img img {
+    display: block;
+}
+
+.ins_text {
+    background-color: #00000085;
+    border-radius: 20px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 300px;
+    box-sizing: border-box;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.sns_mine li:hover .ins_text {
+    transition: all 1s;
+    opacity: 1;
+    cursor: url(../images/eggpen.png)65 65, auto;
+}
+
+.sns_sub li {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sub_img img {
+    display: block;
+}
+
+.sub_text {
+    background-color: #00000085;
+    border-radius: 20px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
+    transition: all 1s;
+    opacity: 0;
+    text-align: center;
+}
+
+.sns_sub li:hover .sub_text {
+    transition: all 1s;
+    opacity: 1;
+    cursor: url(../images/eggpen.png)65 65, auto;
+}
+
+.ins2 {
+    margin: 25px 0px;
+}
+
+.corkage {
+    width: 1320px;
+    padding-top: 70px;
+    margin: 0 auto;
+    background: url(../images/corkage_bg.png) no-repeat;
+    height: 200px;
+    text-align: center;
+}
+
+.corkage h1 {
+    margin-bottom: 10px;
+}
+
+#reservation_wrap {
+    background-color: black;
+    height: 930px;
+}
+
+.reservation {
+    color: white;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.reservation h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 40px 0;
+}
+
+.michelin {
+    float: left;
+    padding-left: 50px;
+}
+
+.reservation_text {
+    float: right;
+    margin-top: 15px;
+}
+
+.reservation_text li {
+    padding-right: 210px;
+}
+
+.reservation_text h2 {
+    margin: 30px 0px;
+    font-size: 30px;
+}
+
+.reservation_text p {
+
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.reservation_button {
+    background-color: #7E9168;
+    color: rgb(255, 255, 255);
+    font-family: 나눔고딕;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    float: right;
+    margin: 50px 510px 0px 0px;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+}
+
+.reservation_button:hover {
+    font-weight: 800;
+    background-color: white;
+    color: #7E9168;
+    border: 3px solid #7E9168;
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+    cursor: url(../images/eggpen.png)65 65, auto;
+}
+
+#location {
+    width: 1320px;
+    margin: 80px auto;
+}
+
+#location h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 40px 0;
+}
+
+.map {
+    padding: 20px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+.map ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map_text {
+    padding: 0px 0px 30px 80px;
+}
+
+.map_text h2 {
+    padding: 50px 0px 30px 0px;
+}
+
+.map_text p {
+    line-height: 30px;
+    font-family: 나눔고딕;
+}
+
+#footer_wrap {
+    background-color: #B3C79C;
+}
+
+.footer {
+    font-family: 나눔고딕;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.f1 ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.footer_img {
+    padding-left: 50px;
+}
+
+.f1_text {
+    padding-right: 50px;
+}
+
+.f2 ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.f2_text {
+    padding-left: 50px;
+    line-height: 40px;
+}
+
+.link {
+    padding-right: 50px;
+}
